@@ -124,14 +124,19 @@
                 <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
                 </label>
 
-                <label class="block mb-2"><strong>Gross Profit : </strong>
-                <?php $profit = $project->value - $modal_ops->total_finance_out ?>
-                <?= "Rp " . number_format($profit, 0, ',', '.'); ?></label>
 
-                <?php $presentase = ($profit / $project->value) * '100' ?>
-                <label class="block mb-2"><strong>Presentase Profit : </strong>
+                <hr>
+                <h2>Profit / Loss</h2>
+
+                <label class="block mb-2"><strong>Nominal : </strong>
+                <?php $profit = $project->value - $modal_ops->total_finance_out ?>
+                <?= "Rp " . number_format($profit, 0, ',', '.'); ?> 
+                <?php $presentase = ($profit / $project->value) * '100' ?>                
                 <?= round($presentase) ?> %
                 </label>
+
+                
+               
 
                 <label class="block mb-2"><strong>Detail : </strong><?= $project->detail ?></label>
 
