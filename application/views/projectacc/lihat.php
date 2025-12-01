@@ -102,14 +102,15 @@
                   </div>
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
-              <h3>Informasi Project</h3>
+              <h3 class="text-2xl font-bold">Informasi Project</h3>
                 <label class="block mb-2"><strong>Nama Project : </strong><?= $project->project_name ?></label>       
                 <label class="block mb-2"><strong>Lokasi : </strong><?= $project->location ?> 
                   <strong>Tanggal Acara : </strong><?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
                 </label>
+                <label class="block mb-2"><strong>Detail : </strong><?= $project->detail ?></label>
 
                 <hr>
-                <h3>Valuasi Project</h3>
+                <h3 class="text-2xl font-bold">Valuasi Project</h3>
                 
                 <label class="block mb-2"><strong>Nilai Project : </strong><?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
 
@@ -138,7 +139,7 @@
                 
                
 
-                <label class="block mb-2"><strong>Detail : </strong><?= $project->detail ?></label>
+                
 
                 <?php
                 $roles = [
