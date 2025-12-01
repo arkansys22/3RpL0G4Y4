@@ -127,7 +127,7 @@
 
 
                 <hr>
-                <h2>Profit / Loss</h2>
+                <h5 class="text-2xl font-bold">Profit / Loss</h5>
 
                 <label class="block mb-2"><strong>Nominal : </strong>
                 <?php $profit = $project->value - $modal_ops->total_finance_out ?>
