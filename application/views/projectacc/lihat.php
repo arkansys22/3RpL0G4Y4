@@ -105,10 +105,8 @@
                 
                 <strong>Informasi Project</strong>
                 <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>       
-                <label class="block mb-2">Lokasi : <?= $project->location ?></label>   
-                <label class="block mb-2">Tanggal Acara : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
-                </label>
-                <label class="block mb-2">Detail : <?= $project->detail ?></label>
+                <label class="block mb-2">Lokasi & Tanggal : <?= $project->location ?> | <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?></label>                  
+                <label class="block mb-2">Detail Project: <?= $project->detail ?></label>
                 <br>
                 <hr>
                 <br>
