@@ -65,18 +65,18 @@
 							<!-- Client Bulan Ini -->
 							<div class="flex items-center justify-between gap-1">
 								<p class="text-sm font-medium">Client Tahun Ini</p>
-									<p id="client_bulan_ini" class="text-sm font-medium"><?= count($client_bulan_ini); ?></p>
+									<p id="client_tahun_ini" class="text-sm font-medium"><?= count($client_tahun_ini); ?></p>
 							</div>
 
 							<!-- Client Bulan Lalu -->
 							<div class="flex items-center justify-between gap-1">
 								<p class="text-sm font-medium">Client Tahun Lalu</p>
-									<p id="client_bulan_lalu" class="text-sm font-medium"><?= count($client_bulan_lalu); ?></p>
+									<p id="client_tahun_lalu" class="text-sm font-medium"><?= count($client_tahun_lalu); ?></p>
 							</div>
 
 							<div class="flex items-center justify-between gap-1">
 								<p class="text-sm font-medium">Client Tahun Depan</p>
-									<p id="client_bulan_depan" class="text-sm font-medium"><?= count($client_bulan_depan); ?></p>
+									<p id="client_tahun_depan" class="text-sm font-medium"><?= count($client_tahun_depan); ?></p>
 							</div>
 
 							<!-- Total Client -->
