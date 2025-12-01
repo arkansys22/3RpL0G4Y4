@@ -102,32 +102,32 @@
                   </div>
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
-                <br>
+                
                 <strong>Informasi Project</strong>
                 <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>       
-                <label class="block mb-2">Lokasi : <?= $project->location ?> 
-                  Tanggal Acara : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
+                <label class="block mb-2">Lokasi : <?= $project->location ?></label>   
+                <label class="block mb-2">Tanggal Acara : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
                 </label>
                 <label class="block mb-2">Detail : <?= $project->detail ?></label>
-
+                <br>
                 <hr>
                 <br>
                 <strong>Valuasi Project</strong>                
                 <label class="block mb-2">
                 Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
-
+                </label> 
+                <label class="block mb-2">
                 Biaya Operasional : 
                 <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
                 </label> 
-
                 <label class="block mb-2 ">Sudah Dibayar : 
-                <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?> 
-
+                <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?>
+                </label>  
+                <label class="block mb-2">
                 Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
                 <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
                 </label>
-
-
+                <br>
                 <hr>
                 <br>
                 <strong>Profit / Loss</strong>
