@@ -112,24 +112,26 @@
                 <br>
                 <strong>Valuasi Project</strong>
                 <div class="mb-4.5 flex flex-col md:flex-row">
-                <div class="w-full md:w-1/2"><label class="block mb-2">
-                Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
-                </label> </div>
-                <div class="w-full md:w-1/2"><label class="block mb-2">
-                Biaya Operasional : 
-                <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
-                </label> </div>
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                  Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
+                  </label> </div>
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                  Biaya Operasional : 
+                  <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
+                  </label> </div>
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                    <label class="block mb-2 ">Sudah Dibayar : 
+                    <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?>
+                    </label>  
+                  </div>
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                    <label class="block mb-2">
+                    Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
+                    <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
+                </label>
+                  </div>
                 </div>                
                 
-                
-                <label class="block mb-2 ">Sudah Dibayar : 
-                <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?>
-                </label>  
-                <label class="block mb-2">
-                Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
-                <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
-                </label>
-                <br>
                 <hr>
                 <br>
                 <strong>Profit / Loss</strong>
