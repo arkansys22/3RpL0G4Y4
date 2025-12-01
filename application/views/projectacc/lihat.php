@@ -110,14 +110,18 @@
                 <br>
                 <hr>
                 <br>
-                <strong>Valuasi Project</strong>                
-                <label class="block mb-2">
+                <strong>Valuasi Project</strong>
+                <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                <div class="w-full xl:w-1/2"><label class="block mb-2">
                 Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
-                </label> 
-                <label class="block mb-2">
+                </label> </div>
+                <div class="w-full xl:w-1/2"><label class="block mb-2">
                 Biaya Operasional : 
                 <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
-                </label> 
+                </label> </div>
+                </div>                
+                
+                
                 <label class="block mb-2 ">Sudah Dibayar : 
                 <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?>
                 </label>  
