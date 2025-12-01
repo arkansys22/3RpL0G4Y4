@@ -127,8 +127,8 @@
 
 
                 <hr>
+                <br>
                 <strong>Profit / Loss</strong>
-
                 <label class="block mb-2">Nominal :
                 <?php $profit = $project->value - $modal_ops->total_finance_out ?>
                 <?= "Rp " . number_format($profit, 0, ',', '.'); ?> 
