@@ -102,6 +102,7 @@
                   </div>
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
+                <br>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                 <h1 class="text-lg font-bold">Informasi Project</h1>
                 </div>
@@ -121,6 +122,7 @@
                 <label class="block mb-2">Detail Project: <strong><?= $project->detail ?></strong></label>
                 </div>
                 <hr>
+                <br>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                 <h1 class="text-lg font-bold">Valuasi Project</h1>
                 </div>
@@ -142,7 +144,7 @@
                   </div>
                   <div class="w-full md:w-1/2"><label class="block mb-2">
                     <label class="block mb-2">
-                    Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
+                    Belum Dibayar : <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
                     <strong><?= "Rp " . number_format($kurang, 0, ',', '.'); ?></strong>
                     </label>
                   </div>
