@@ -118,7 +118,7 @@
                 <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
                 </label> 
 
-                <label class="block mb-2"><strong>Sudah Dibayar : </strong>
+                <label class="block mb-2 "><strong>Sudah Dibayar : </strong>
                 <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?> 
 
                 <strong>Belum Dibayar</strong> <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
@@ -127,13 +127,13 @@
 
 
                 <hr>
-                <h5 class="text-2xl font-bold">Profit / Loss</h5>
+                <strong>Profit / Loss</strong>
 
                 <label class="block mb-2"><strong>Nominal : </strong>
                 <?php $profit = $project->value - $modal_ops->total_finance_out ?>
                 <?= "Rp " . number_format($profit, 0, ',', '.'); ?> 
                 <?php $presentase = ($profit / $project->value) * '100' ?>                
-                <?= round($presentase) ?> %
+                (<?= round($presentase) ?> %)
                 </label>
 
                 
