@@ -129,7 +129,7 @@
                 <hr>
                 <strong>Profit / Loss</strong>
 
-                <label class="block mb-2"><strong>Nominal : </strong>
+                <label class="block mb-2">Nominal :
                 <?php $profit = $project->value - $modal_ops->total_finance_out ?>
                 <?= "Rp " . number_format($profit, 0, ',', '.'); ?> 
                 <?php $presentase = ($profit / $project->value) * '100' ?>                
