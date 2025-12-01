@@ -107,7 +107,7 @@
                 <h1 class="text-lg font-bold">Informasi Project</h1>
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
-                <label class="block mb-2">Nama Project <p><strong><?= $project->project_name ?></strong></p></label>  
+                <label class="block mb-2">Nama Project <p> <h1 class="text-lg font-bold"><?= $project->project_name ?></h1></p></label>  
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                   <div class="w-full md:w-1/2"><label class="block mb-2">
