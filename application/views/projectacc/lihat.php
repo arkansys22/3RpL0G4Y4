@@ -103,7 +103,7 @@
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
                 
-                <h1 class="text-sm font-bold">Informasi Project</h1>
+                <h1 class="text-lg font-bold">Informasi Project</h1>
                 <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>       
                 <label class="block mb-2">Lokasi & Tanggal : <?= $project->location ?> | <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?></label>                  
                 <label class="block mb-2">Detail Project: <?= $project->detail ?></label>
