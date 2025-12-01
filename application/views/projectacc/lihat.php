@@ -104,7 +104,7 @@
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
                 <br>
                 <div class="mb-4.5 flex flex-col md:flex-row">
-                <h1 class="text-lg font-bold">Informasi Project</h1>
+                <h1 class="text-xl font-bold">Informasi Project</h1>
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                 <label class="block mb-2">Nama Project <p> <h1 class="text-lg font-bold"><?= $project->project_name ?></h1></p></label>  
