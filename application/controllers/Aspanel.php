@@ -39,9 +39,9 @@ class Aspanel extends CI_Controller {
 				cek_session_akses_developer('panel', $this->session->id_session);
 				$month_now = date('Y-m');
 				$month_last = date('Y-m', strtotime('last month'));
-				$data['client_bulan_ini'] = $this->Clients_model->get_clients_by_month(date('Y-m'));  // Client bulan ini
-				$data['client_bulan_lalu'] = $this->Clients_model->get_clients_by_month(date('Y-m', strtotime('last month'))); // Client bulan lalu
-				$data['client_bulan_depan'] = $this->Clients_model->get_clients_by_month(date('Y-m', strtotime('next month'))); // Client bulan depan
+				$data['client_bulan_ini'] = $this->Clients_model->get_clients_by_month(date('Y'));  // Client bulan ini
+				$data['client_bulan_lalu'] = $this->Clients_model->get_clients_by_month(date('Y', strtotime('last year'))); // Client bulan lalu
+				$data['client_bulan_depan'] = $this->Clients_model->get_clients_by_month(date('Y', strtotime('next year'))); // Client bulan depan
 				$data['total_client'] = $this->Clients_model->get_total_clients(); // Total client
 
 				
