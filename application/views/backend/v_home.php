@@ -64,18 +64,18 @@
 						<div class="mt-5.5 flex flex-col gap-1.5">
 							<!-- Client Bulan Ini -->
 							<div class="flex items-center justify-between gap-1">
-								<p class="text-sm font-medium">Client Bulan Ini</p>
+								<p class="text-sm font-medium">Client Tahun Ini</p>
 									<p id="client_bulan_ini" class="text-sm font-medium"><?= count($client_bulan_ini); ?></p>
 							</div>
 
 							<!-- Client Bulan Lalu -->
 							<div class="flex items-center justify-between gap-1">
-								<p class="text-sm font-medium">Client Bulan Lalu</p>
+								<p class="text-sm font-medium">Client Tahun Lalu</p>
 									<p id="client_bulan_lalu" class="text-sm font-medium"><?= count($client_bulan_lalu); ?></p>
 							</div>
 
 							<div class="flex items-center justify-between gap-1">
-								<p class="text-sm font-medium">Client Bulan Depan</p>
+								<p class="text-sm font-medium">Client Tahun Depan</p>
 									<p id="client_bulan_depan" class="text-sm font-medium"><?= count($client_bulan_depan); ?></p>
 							</div>
 
