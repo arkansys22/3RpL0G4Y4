@@ -102,15 +102,28 @@
                   </div>
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
-                
+                <div class="mb-4.5 flex flex-col md:flex-row">
                 <h1 class="text-lg font-bold">Informasi Project</h1>
-                <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>       
-                <label class="block mb-2">Lokasi & Tanggal : <?= $project->location ?> | <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?></label>                  
+                </div>
+                <div class="mb-4.5 flex flex-col md:flex-row">
+                <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>  
+                </div>
+                <div class="mb-4.5 flex flex-col md:flex-row">
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                  Lokasi : <?= $project->location ?>
+                  </label> 
+                  </div>
+                  <div class="w-full md:w-1/2"><label class="block mb-2">
+                  Tanggal : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
+                  </div>                  
+                </div>
+                <div class="mb-4.5 flex flex-col md:flex-row">
                 <label class="block mb-2">Detail Project: <?= $project->detail ?></label>
-                <br>
+                </div>
                 <hr>
-                <br>
-                <strong>Valuasi Project</strong>
+                <div class="mb-4.5 flex flex-col md:flex-row">
+                <h1 class="text-lg font-bold">Valuasi Project</h1>
+                </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                   <div class="w-full md:w-1/2"><label class="block mb-2">
                   Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
