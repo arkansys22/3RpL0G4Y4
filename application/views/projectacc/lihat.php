@@ -111,7 +111,7 @@
                 <hr>
                 <br>
                 <strong>Valuasi Project</strong>
-                <div class="mb-4.5 flex flex-col gap-6 md:flex-row">
+                <div class="mb-4.5 flex flex-col md:flex-row">
                 <div class="w-full md:w-1/2"><label class="block mb-2">
                 Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
                 </label> </div>
