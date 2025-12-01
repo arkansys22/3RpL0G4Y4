@@ -106,19 +106,19 @@
                 <h1 class="text-lg font-bold">Informasi Project</h1>
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
-                <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>  
+                <label class="block mb-2">Nama Project : <strong><?= $project->project_name ?></strong></label>  
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                   <div class="w-full md:w-1/2"><label class="block mb-2">
-                  Lokasi : <?= $project->location ?>
+                  Lokasi : <strong><?= $project->location ?></strong>
                   </label> 
                   </div>
                   <div class="w-full md:w-1/2"><label class="block mb-2">
-                  Tanggal : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
+                  Tanggal : <strong><?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?></strong>
                   </div>                  
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
-                <label class="block mb-2">Detail Project: <?= $project->detail ?></label>
+                <label class="block mb-2">Detail Project: <strong><?= $project->detail ?></strong></label>
                 </div>
                 <hr>
                 <div class="mb-4.5 flex flex-col md:flex-row">
@@ -126,37 +126,41 @@
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                   <div class="w-full md:w-1/2"><label class="block mb-2">
-                  Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
-                  </label> </div>
+                  Nilai Project : <strong><?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
+                  </label> </strong></div>
                   <div class="w-full md:w-1/2"><label class="block mb-2">
                   Biaya Operasional : 
-                  <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
+                  <strong><?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?></strong>
                   </label> </div>
 
                 </div>
                 <div class="mb-4.5 flex flex-col md:flex-row">
                   <div class="w-full md:w-1/2"><label class="block mb-2">
                     <label class="block mb-2 ">Sudah Dibayar : 
-                    <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?>
+                    <strong><?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?></strong>
                     </label>  
                   </div>
                   <div class="w-full md:w-1/2"><label class="block mb-2">
                     <label class="block mb-2">
                     Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
-                    <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
+                    <strong><?= "Rp " . number_format($kurang, 0, ',', '.'); ?></strong>
                     </label>
                   </div>
                 </div>                
                 
                 <hr>
                 <br>
-                <strong>Profit / Loss</strong>
-                <label class="block mb-2">Nominal :
-                <?php $profit = $project->value - $modal_ops->total_finance_out ?>
-                <?= "Rp " . number_format($profit, 0, ',', '.'); ?> 
-                <?php $presentase = ($profit / $project->value) * '100' ?>                
-                (<?= round($presentase) ?> %)
-                </label>
+                <div class="mb-4.5 flex flex-col md:flex-row">
+                  <h1 class="text-lg font-bold">Profit / Loss</h1>
+                </div>
+                <div class="mb-4.5 flex flex-col md:flex-row">
+                  <label class="block mb-2">Nominal :
+                  <?php $profit = $project->value - $modal_ops->total_finance_out ?>
+                  <strong><?= "Rp " . number_format($profit, 0, ',', '.'); ?> </strong>
+                  <?php $presentase = ($profit / $project->value) * '100' ?>                
+                  (<strong><?= round($presentase) ?> %</strong>)
+                  </label>
+                </div>
 
                 
                
