@@ -102,26 +102,28 @@
                   </div>
                 </div>
               <form action="<?= site_url('project/update/'.$project->id_session) ?>" method="post" class="bg-white dark:bg-boxdark p-6 shadow-md rounded">
-              <h3 class="text-2xl font-bold">Informasi Project</h3>
-                <label class="block mb-2"><strong>Nama Project : </strong><?= $project->project_name ?></label>       
-                <label class="block mb-2"><strong>Lokasi : </strong><?= $project->location ?> 
-                  <strong>Tanggal Acara : </strong><?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
+                <br>
+                <strong>Informasi Project</strong>
+                <label class="block mb-2">Nama Project : <?= $project->project_name ?></label>       
+                <label class="block mb-2">Lokasi : <?= $project->location ?> 
+                  Tanggal Acara : <?= hari($project->event_date) ?>, <?= tgl_indo($project->event_date) ?>
                 </label>
-                <label class="block mb-2"><strong>Detail : </strong><?= $project->detail ?></label>
+                <label class="block mb-2">Detail : <?= $project->detail ?></label>
 
                 <hr>
-                <h3 class="text-2xl font-bold">Valuasi Project</h3>
-                
-                <label class="block mb-2"><strong>Nilai Project : </strong><?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
+                <br>
+                <strong>Valuasi Project</strong>                
+                <label class="block mb-2">
+                Nilai Project : <?= "Rp " . number_format($project->value, 0, ',', '.'); ?>
 
-                <strong>Biaya Operasional : </strong>
+                Biaya Operasional : 
                 <?= "Rp " . number_format($modal_ops->total_finance_out, 0, ',', '.'); ?>
                 </label> 
 
-                <label class="block mb-2 "><strong>Sudah Dibayar : </strong>
+                <label class="block mb-2 ">Sudah Dibayar : 
                 <?= "Rp " . number_format($terbayar_ops->total_dibayarkan, 0, ',', '.'); ?> 
 
-                <strong>Belum Dibayar</strong> <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
+                Belum Dibayar <?php $kurang = $project->value - $terbayar_ops->total_dibayarkan  ?>
                 <?= "Rp " . number_format($kurang, 0, ',', '.'); ?>
                 </label>
 
